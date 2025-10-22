@@ -1,7 +1,7 @@
 ---
-description: During the nonlinear training of neural networks, neurons in the same layer tend to condense into groups with similar outputs
+description: The book of cat
 public: true
-title: Condensation
+title: Book
 pubDate: 2025-09-28
 tags:
   - Training

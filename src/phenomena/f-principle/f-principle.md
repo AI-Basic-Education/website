@@ -1,7 +1,7 @@
 ---
-description: Deep neural networks tend to learn from low to high frequency
+description: The code 
 public: true
-title: Frequency Principle/Spectral Bias
+title: Code
 pubDate: 2025-10-03
 tags:
   - Training
