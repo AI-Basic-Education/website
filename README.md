@@ -1,250 +1,153 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68ff35fe-1e37-41ca-8ab6-8e43659cb06a/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b35e67c-95f3-4161-8b18-c102f3ebd483/deploy-status)](https://app.netlify.com/projects/dlphenomena/deploys)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/dlphenomena)
 
-# Deep Learning Phenomena Website
+# Deep Learning Phenomena
 
-A modern, fast, and responsive website dedicated to exploring and sharing interesting phenomena in deep learning. Built with cutting-edge web technologies for optimal performance and user experience.
+A modern blog and documentation website exploring interesting phenomena in deep learning, built with Next.js and powered by Fumadocs. You can visit the webpage by
 
-🌐 **Live Site**: [https://dlphenomena.netlify.app](https://dlphenomena.netlify.app)
+https://dlphenomena.netlify.app or https://dlphenomena.vercel.app/
 
-## 📖 About
+## 🚀 Features
 
-This website serves as a platform for documenting and discussing fascinating phenomena observed in deep learning research, including topics like:
-- Neural network training behaviors (e.g., condensation phenomenon)
-- F-principle and frequency dynamics
-- Network architecture insights
-- And more emerging topics in deep learning
-
-## ✨ Features
-
-- 📝 **Blog System** - Markdown/MDX-based blog with reading time estimates
-- 🎨 **Modern UI** - Clean, responsive design with dark mode support
-- 🚀 **Fast Performance** - Static site generation with Astro
-- 📱 **Mobile-Friendly** - Fully responsive across all devices
-- 🔍 **SEO Optimized** - Sitemap generation and meta tags
-- 🎯 **TypeScript** - Type-safe development experience
-- 🎨 **Tailwind CSS** - Utility-first styling with **custom** components
+- **MDX-powered content** - Write content with Markdown and React components
+- **Mathematical equations** - Full support for LaTeX equations using KaTeX
+- **Reading time estimation** - Automatic calculation of reading time for articles
+- **Dark mode** - Beautiful dark/light theme with system preference detection
+- **Responsive design** - Optimized for all screen sizes
+- **Type-safe** - Built with TypeScript for better developer experience
+- **Fast builds** - Optimized with Bun runtime support
 
 ## 🛠️ Tech Stack
 
-### Core Frameworks
+- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
+- **Content**: [Fumadocs](https://fumadocs.vercel.app/) for MDX content management
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI Components**:
+  - Headless UI
+  - Shadcn/ui
+  - Lucide React icons
+- **Math Rendering**: KaTeX with remark-math and rehype-katex
+- **Theme**: next-themes for dark mode support
+- **Type Safety**: TypeScript
+- **Linting**: ESLint with Prettier
 
-- [Astro](https://astro.build/) v5 - Modern static site builder
-- [React](https://react.dev/) v19 - Interactive UI components
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
+## 📋 Prerequisites
 
-### Styling & UI
+- Node.js 20+ or Bun 1.3+
+- bun (recommended) or pnpm (require node preinstalled)
 
-- [Tailwind CSS](https://tailwindcss.com/) v4 - Utility-first CSS framework
-- [Shadcn UI](https://ui.shadcn.com/) - High-quality React components
-- [Headless UI](https://headlessui.com/) - Unstyled accessible components
-- [Radix UI](https://www.radix-ui.com/) - Primitive UI components
-- [Lucide React](https://lucide.dev/) - Beautiful icon library
-- [React Icons](https://react-icons.github.io/react-icons/) - Popular icon sets
+## 🏃 Getting Started
 
-### Content & Plugins
+1. **Clone the repository**
 
-- [MDX](https://mdxjs.com/) - Markdown with JSX support
-- Custom Remark plugins for reading time and modified dates
-- RSS feed generation
-- Sitemap generation
-
-### Development Tools
-
-- [Biome](https://biomejs.dev/) - Fast linter and formatter
-- [Prettier](https://prettier.io/) - Code formatter
-- [Bun](https://bun.sh/) - Fast JavaScript runtime and package manager
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-You'll need one of the following package managers installed:
-- [Bun](https://bun.sh/) (recommended for fastest performance)
-- [pnpm](https://pnpm.io/)
-- [npm](https://www.npmjs.com/)
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/dlphenomena/website.git
+git clone https://github.com/dlphenomena/website
 cd website
 ```
 
-2. Install dependencies:
+2. **Install dependencies**
 
-**With Bun (recommended):**
 ```bash
+# Using bun
 bun install
-```
 
-**With pnpm:**
-```bash
+# Using pnpm
 pnpm install
 ```
 
-**With npm:**
+3. **Run the development server**
+
 ```bash
-npm install
-```
+# Using bun
+bun dev
 
-### Development
-
-Start the development server:
-
-**With Bun:**
-```bash
-bun run dev
-```
-
-**With pnpm:**
-```bash
+# Using pnpm
 pnpm dev
 ```
 
-**With npm:**
-```bash
-npm run dev
-```
+4. **Open your browser**
 
-The site will be available at `http://localhost:4321`
-
-### Building for Production
-
-Build the static site:
-
-```bash
-bun run build
-# or
-pnpm build
-# or
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-bun run preview
-# or
-pnpm preview
-# or
-npm run preview
-```
+Navigate to [http://localhost:3000](http://localhost:3000) to see the website.
 
 ## 📁 Project Structure
 
-```
-/
-├── public/              # Static assets (favicon, images, etc.)
-│   ├── favicon.jpg
-│   └── sjtu-logo.png
-├── src/
-│   ├── assets/         # Optimized images and assets
-│   │   ├── avatars/
-│   │   ├── blog/
-│   │   └── thumbnails/
-│   ├── components/     # React and Astro components
-│   │   ├── ui/         # Reusable UI components
-│   │   ├── Header.astro
-│   │   ├── Footer.astro
-│   │   └── ...
-│   ├── content/        # Markdown/MDX blog posts
-│   │   └── blog/
-│   ├── layouts/        # Page layouts
-│   │   ├── BaseLayout.astro
-│   │   ├── BlogPost.astro
-│   │   └── ...
-│   ├── pages/          # File-based routing
-│   │   ├── index.astro
-│   │   ├── about.astro
-│   │   ├── blog/
-│   │   └── ...
-│   ├── plugins/        # Custom Remark plugins
-│   ├── styles/         # Global styles
-│   │   └── global.css
-│   ├── lib/            # Utility functions
-│   └── consts.ts       # Site configuration
-├── astro.config.mjs    # Astro configuration
-├── tailwind.config.js  # Tailwind CSS configuration
-├── tsconfig.json       # TypeScript configuration
-├── biome.json          # Biome linter/formatter config
-└── package.json
+```bash
+next-website/
+├── app/                   # Next.js App Router pages
+│   ├── (home)/            # Home page group
+│   ├── phenomena/         # Phenomena articles routes
+│   ├── layout.tsx         # Root layout with theme provider
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── header.tsx         # Site header
+│   ├── footer.tsx         # Site footer
+│   └── theme-provider.tsx # Theme context provider
+├── content/               # MDX content
+│   └── phenomena/         # Deep learning phenomena articles
+├── lib/                   # Utility functions and plugins
+│   └── remark-plugins/    # Custom remark plugins
+├── public/                # Static assets
+├── source.config.ts       # Fumadocs configuration
+└── package.json           # Dependencies and scripts
 ```
 
-## 📝 Adding Content
+## ✍️ Creating Content
 
-### Creating a New Blog Post
+Content is managed using Fumadocs and stored in the `content/phenomena` directory.
 
-1. Create a new `.md` or `.mdx` file in `src/content/blog/`:
+### Adding a new phenomenon article
 
-```markdown
+1. Create a new `.mdx` file in `content/phenomena/`
+2. Add frontmatter with required fields:
+
+```mdx
 ---
-title: "Your Post Title"
-description: "Brief description of your post"
-author: "xxx, xxx, xxx"
-pubDate: 2025-01-15
-tags:
-  - Tag1
-  - Tag2
-public: true
+title: "Your Phenomenon Title"
+description: "A brief description"
+author: "Your Name"
+pubDate: "2024-01-01"
+tags: ["deep-learning", "neural-networks"]
+relatedWorks: "Optional related works section"
 ---
 
-## Your content here...
+# Your Content Here
+
+Write your article using MDX syntax...
 ```
 
-2. Add any images to `src/assets/blog/` and reference them in your post
-3. The reading time and last modified date are automatically calculated
+### Using Math Equations
 
-## 🎨 Customization
+The site supports LaTeX math equations:
 
-### Site Configuration
+- Inline math: `$E = mc^2$`
+- Block math:
 
-Edit `src/consts.ts` to update:
-- Site title and description
-- Committee member information
-- Social links
-- And other global settings
+```
+$$
+\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x)
+$$
+```
 
-### Styling
+## 🎨 Styling
 
-- Global styles: `src/styles/global.css`
-- Tailwind configuration: `tailwind.config.js`
-- Component-specific styles use Tailwind utility classes
+The project uses Tailwind CSS 4 with custom configuration. Key features:
 
-## 🚢 Deployment
-
-This site is configured for deployment on [Netlify](https://www.netlify.com/):
-
-1. Push your changes to GitHub
-2. Connect your repository to Netlify
-3. Netlify will automatically build and deploy using the settings in `netlify.toml`
-
-Build configuration:
-- Build command: `bun run build`
-- Publish directory: `dist`
-
-## 👥 Committee
-
-The website is maintained by researchers from Shanghai Jiao Tong University. See the [Committee page](https://dlphenomena.netlify.app/committee) for more information.
-
-## 📄 License
-
-This project is open source and available under the [LICENSE](LICENSE) file in the repository.
+- Custom color scheme with orange accent
+- Dark mode support via CSS variables
+- Typography plugin for article content
+- Custom animations with tw-animate-css
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+This is a personal project. If you have suggestions or find issues, feel free to reach out.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 📚 Learn More
 
-## 🐛 Issues
-
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/dlphenomena/website/issues) on GitHub.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Fumadocs Documentation](https://fumadocs.vercel.app/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [MDX Documentation](https://mdxjs.com/)
 
 ---
 
-Built with ❤️ by the Deep Learning Phenomena team
+Built with ❤️ using Next.js and Fumadocs
