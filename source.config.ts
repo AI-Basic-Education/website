@@ -5,6 +5,7 @@ import {
   defineDocs,
   frontmatterSchema,
 } from "fumadocs-mdx/config"
+import lastModified from "fumadocs-mdx/plugins/last-modified"
 import rehypeKatex from "rehype-katex"
 import remarkMath from "remark-math"
 import { z } from "zod"
@@ -18,7 +19,7 @@ export const phenomena = defineDocs({
       // 可选：如果提供 externalUrl，则首页卡片会跳转到这个外部链接
       externalUrl: z.string().url().optional(),
     }),
-    files: ["**/*", "!**/data/*"],
+    files: ["**/*", "!**/data/*", "!**/*.json"],
     postprocess: {
       includeProcessedMarkdown: true,
     },
@@ -34,5 +35,5 @@ export default defineConfig({
     rehypePlugins: (v) => [rehypeKatex, ...v],
     valueToExport: ["readingTime"],
   },
-  lastModifiedTime: "git",
+  plugins: [lastModified()],
 })
