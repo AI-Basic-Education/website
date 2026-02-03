@@ -38,7 +38,6 @@ function HeaderLink({
 export default function HeaderLinks() {
   return (
     <>
-      <HeaderLink href="/about">About</HeaderLink>
       <HeaderLink href="/team">Team</HeaderLink>
       <HeaderLink href="mailto:xuzhiqin@sjtu.edu.cn">Contact</HeaderLink>
       <HeaderLink
@@ -48,6 +47,10 @@ export default function HeaderLinks() {
         <IoLogoGithub />
         Repos
       </HeaderLink>
+      <HeaderLink 
+      href="https://instituteml.netlify.app/" 
+      className="flex items-center gap-2"
+      >IML</HeaderLink>
     </>
   )
 }
