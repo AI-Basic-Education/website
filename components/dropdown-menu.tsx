@@ -39,7 +39,7 @@ export default function DropdownMenu({
       >
         <MenuItems className="ring-opacity-5 absolute right-0 z-10 mt-2 w-56 origin-top-right divide-zinc-400 rounded-md border border-zinc-400 bg-slate-50 shadow-xl ring-1 ring-black focus:outline-none dark:divide-zinc-700 dark:border-zinc-700 dark:bg-zinc-800">
           <div className="py-1">
-            <div className="px-3 py-2 text-xs font-bold uppercase">Menu</div>
+            <div className="px-3 py-2 font-sans-cn text-xs font-bold">菜单</div>
             {tags.map((tag) => {
               return (
                 <DropdownMenuItem key={tag.href} href={tag.href}>

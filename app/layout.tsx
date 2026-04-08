@@ -3,11 +3,15 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono, Noto_Sans_SC } from "next/font/google"
 
 const interSans = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"],
+})
+
+const notoSansSC = Noto_Sans_SC({
+  variable: "--font-noto-sans-sc",
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -29,7 +33,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${interSans.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${interSans.variable} ${notoSansSC.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <body className="bg-background font-sans leading-normal wrap-break-word text-zinc-900 dark:bg-zinc-900 dark:text-zinc-300">
         <ThemeProvider

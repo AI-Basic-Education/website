@@ -6,10 +6,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 const headerLinks = [
-  { href: "/about", text: "About" },
-  { href: "/team", text: "Team" },
-  { href: "mailto:xuzhiqin@sjtu.edu.cn", text: "Contact" },
-  { href: "https://github.com/dlphenomena", text: "Repos" },
+  { href: "https://github.com/dlphenomena", text: "代码仓库" },
+  { href: "/team", text: "维护团队" },
+  // { href: "/about", text: "关于" },
+  { href: "mailto:xuzhiqin@sjtu.edu.cn", text: "联系" },
+  { href: "https://instituteml.netlify.app/", text: "IML" },
 ]
 
 export default function Header() {
@@ -23,9 +24,11 @@ export default function Header() {
               src={Logo}
               alt="Logo"
             />
-            <h2 className="p-2 text-lg font-semibold tracking-tighter">Home</h2>
+            <h2 className="p-2 font-sans-cn text-lg font-semibold tracking-tighter">
+              主页
+            </h2>
           </Link>
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-6 font-sans-cn md:flex">
             <HeaderLinks />
           </div>
           <div className="flex-1"></div>

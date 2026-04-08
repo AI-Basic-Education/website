@@ -38,19 +38,21 @@ function HeaderLink({
 export default function HeaderLinks() {
   return (
     <>
-      <HeaderLink href="/team">Team</HeaderLink>
-      <HeaderLink href="mailto:xuzhiqin@sjtu.edu.cn">Contact</HeaderLink>
       <HeaderLink
         href="https://github.com/dlphenomena"
         className="flex items-center gap-2"
       >
         <IoLogoGithub />
-        Repos
+        代码仓库
       </HeaderLink>
-      <HeaderLink 
-      href="https://instituteml.netlify.app/" 
-      className="flex items-center gap-2"
-      >IML</HeaderLink>
+      <HeaderLink href="/team">维护团队</HeaderLink>
+      <HeaderLink href="mailto:xuzhiqin@sjtu.edu.cn">联系</HeaderLink>
+      <HeaderLink
+        href="https://instituteml.netlify.app/"
+        className="flex items-center gap-2"
+      >
+        IML
+      </HeaderLink>
     </>
   )
 }

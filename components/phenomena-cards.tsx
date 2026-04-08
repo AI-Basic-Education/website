@@ -20,23 +20,23 @@ export default function PhenomenaCards() {
 
           const content = (
             <Card className="flex h-full flex-col">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold">
-                      {page.data.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    {page.data.description && (
-                      <div className="opacity-70">{page.data.description}</div>
-                    )}
-                  </CardContent>
-                  <CardFooter className="mb-2">
-                    <p className="date flex items-center gap-2 font-mono text-sm opacity-70">
-                      Learn more
-                      <ArrowRight className="inline-block size-4" />
-                    </p>
-                  </CardFooter>
-                </Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-bold">
+                  {page.data.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                {page.data.description && (
+                  <div className="opacity-70">{page.data.description}</div>
+                )}
+              </CardContent>
+              <CardFooter className="mb-2">
+                <p className="date flex items-center gap-2 font-mono text-sm opacity-70">
+                  更多详情
+                  <ArrowRight className="inline-block size-4" />
+                </p>
+              </CardFooter>
+            </Card>
           )
 
           return (
